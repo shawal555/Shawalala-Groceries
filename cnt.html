@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="cnt.css">
+</head>
+<body>
+     <div class="main">
+        <div class="navbar">  
+          <div class="menu">
+            <u1>
+              <h2 class="logo"><a href=index.html class="logo"> <img src="pic/logos.jpg" alt="Company logo"></a></h2>  
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">product</a></li>
+                <li><a href="atc.html">carts</a></li>
+                <li><a href="cnt.html">contact</a></li>
+            </u1>
+            
+          </div>
+          <br><br>
+          <br><br><br><br>
+        </div>
+
+<p id="top" style="margin-top: 150px;"><b>TYPE OF SERVICE</b></p>
+
+<div class="img_slider">
+    <div class="list">
+        <div class="items">
+            <div class="overlay">
+                <div class="text">
+                <h2>ABOUT US</h2><br>
+                <p>Welcome to Shawalala Grocery Shop – your one-stop destination for fresh, high-quality food and daily essentials. We offer a wide range of products including fruits and vegetables,grains, snacks, beverages, household items and more. Our goal is to provide customers with affordable prices, friendly service, and a clean, organized shopping environment. Whether you’re picking up your weekly groceries or just grabbing a few items, we’re here to make your shopping experience convenient and pleasant.
+
+</p><br><br>
+              
+                <h3>PRODUCTS :</h3>
+                <ul>
+                  <li>Ayam</li>
+                  <li>Ikan</li>
+                  <li>Tembikai</li>
+                  <li>Susu</li>
+                  <li>Minyak Masak</li>
+                  <li>Kacang</li>
+                  <li>Beras</li>
+                </ul><br>
+              
+                <p>Fast service. Get your groceries today!</p>
+              </div>
+            </div>
+            <img src="pic/secbck.jpg" alt="">
+        </div>
+        <div class="items">
+            <div class="overlay">  
+                <div class="text">
+                    <h2>CONTACT</h2><br>
+                    <p>Our <strong>Shawalala Grocery Shop</strong> provide the best service for you!</p><br><br>
+                  
+                    <h3>How to contact us?</h3>
+                    <ul><br>
+                      <li>Whatsapp number - 014-552 3824 (SHAWAL AIMAN) </li>
+                      <li>Instagram - @shawalalalalalala</li>
+                      <li>Email - shawalaiman929@gmail.com </li>
+                    </ul><br><br>
+                  
+                    <p>Keep your household grocery items fresh. Buy today right now!!!</p>
+                  </div>
+            </div>
+            <img src="pic/food.avif" alt="">
+        </div>
+    </div>
+    <div class="tonggle">
+        <button id="prev" onclick="prevbn();"><i class="uil uil-angle-left"></i></button>
+        <button id="next" onclick="nextbn();"><i class="uil uil-angle-right"></i></button>
+    </div>
+
+    <ul class="dots">
+        <li class="actives" onclick="goToSlide(0);"></li>
+        <li onclick="goToSlide(1);"></li>
+    </ul>
+</div>
+<footer>
+    <p>copyright </p>
+</footer>
+
+
+        </div>
+    </div>
+    
+    <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.items');
+    const dots = document.querySelectorAll('.dots li');
+
+    function updateSlider() {
+        const newTransform = -currentIndex * 100;
+        document.querySelector('.list').style.transform = `translateX(${newTransform}%)`;
+
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.remove('actives');
+            if (index === currentIndex) {
+                dot.classList.add('actives');
+            }
+        });
+    }
+
+    function prevbn() {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        updateSlider();
+    }
+
+    function nextbn() {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    // Initialize the slider
+    updateSlider();
+</script>
+</body>
+
+</html>

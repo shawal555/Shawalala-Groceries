@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping Cart Improved</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="stylesheet" href="atc.css" />
+</head>
+<body>
+  <div class="navbar">
+              <div class="menu">
+            <u1>
+              <h2 class="logo"><a href=index.html class="logo"> <img src="pic/logos.jpg" alt="Company logo"></a></h2>  
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">product</a></li>
+                <li><a href="atc.html">carts</a></li>
+                <li><a href="cnt.html">contact</a></li>
+            </u1>
+            
+          </div>
+          <br><br>
+          <br><br><br><br>
+  </div>
+
+  <div class="cart-container">
+    <h2>Your Shopping Cart</h2>
+
+    <!-- Form Section -->
+    <div class="form-section">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required placeholder="e.g. 123-456-7890" />
+
+      <label for="payment">Type of Payment:</label>
+      <select id="payment" name="payment" required>
+        <option value="">Select payment method</option>
+        <option value="Credit Card">Credit Card</option>
+        <option value="PayPal">PayPal</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Product 1 -->
+        <tr>
+          <td>
+            <input type="checkbox" id="product1" />
+          </td>
+          <td><img src="pic/ayem.png" alt="Fresh Apples" /></td>
+          <td>AYAM</td>
+          <td>
+            <select id="product1-option" onchange="updateTotalRow('product1')">
+              <option data-price="5" selected>1 ekor - RM5</option>
+              <option data-price="9">2 ekor - RM9</option>
+            </select>
+          </td>
+          <td>
+            <input
+              type="number"
+              id="product1-quantity"
+              value="0"
+              min="0"
+              style="width: 60px"
+              onchange="updateTotalRow('product1')"
+            />
+          </td>
+          <td class="item-total" id="product1-total">RM 0</td>
+        </tr>
+        <!-- Product 2 -->
+        <tr>
+          <td>
+            <input type="checkbox" id="product2" />
+          </td>
+          <td><img src="pic/ikang.png" alt="Bananas" /></td>
+          <td>IKAN</td>
+          <td>
+            <select id="product2-option" onchange="updateTotalRow('product2')">
+              <option data-price="3" selected>Per gram - RM3</option>
+              <option data-price="5">Per kg - RM5</option>
+            </select>
+          </td>
+          <td>
+            <input
+              type="number"
+              id="product2-quantity"
+              value="0"
+              min="0"
+              style="width: 60px"
+              onchange="updateTotalRow('product2')"
+            />
+          </td>
+          <td class="item-total" id="product2-total">RM 0</td>
+        </tr>
+        <!-- Product 3 -->
+        <tr>
+          <td>
+            <input type="checkbox" id="product3" />
+          </td>
+          <td><img src="pic/melon.jpg" alt="Bananas" /></td>
+          <td>TEMBIKAI</td>
+          <td>
+            <select id="product3-option" onchange="updateTotalRow('product2')">
+              <option data-price="3" selected>Per gram - RM3</option>
+              <option data-price="5">Two kg - RM5</option>
+            </select>
+          </td>
+          <td>
+            <input
+              type="number"
+              id="product3-quantity"
+              value="0"
+              min="0"
+              style="width: 60px"
+              onchange="updateTotalRow('product3')"
+            />
+          </td>
+          <td class="item-total" id="product3-total">RM 0</td>
+        </tr>
+        <!-- Product 4 -->
+        <tr>
+          <td>
+            <input type="checkbox" id="product4" />
+          </td>
+          <td><img src="pic/milk.jpg" alt="Bananas" /></td>
+          <td>SUSU</td>
+          <td>
+            <select id="product4-option" onchange="updateTotalRow('product4')">
+              <option data-price="3" selected>1 botol - RM3</option>
+              <option data-price="5">2 botol - RM5</option>
+            </select>
+          </td>
+          <td>
+            <input
+              type="number"
+              id="product4-quantity"
+              value="0"
+              min="0"
+              style="width: 60px"
+              onchange="updateTotalRow('product4')"
+            />
+          </td>
+          <td class="item-total" id="product4-total">RM 0</td>
+        </tr>
+        <!-- Product 5 -->
+        <tr>
+          <td>
+            <input type="checkbox" id="product5" />
+          </td>
+          <td><img src="pic/beras.jpg" alt="Bananas" /></td>
+          <td>BERAS</td>
+          <td>
+            <select id="product5-option" onchange="updateTotalRow('product5')">
+              <option data-price="3" selected>5 kg - RM10</option>
+              <option data-price="5">10 kg - RM15</option>
+            </select>
+          </td>
+          <td>
+            <input
+              type="number"
+              id="product5-quantity"
+              value="0"
+              min="0"
+              style="width: 60px"
+              onchange="updateTotalRow('product5')"
+            />
+          </td>
+          <td class="item-total" id="product5-total">RM 0</td>
+        </tr>
+        <!-- Product 6 -->
+        <tr>
+          <td>
+            <input type="checkbox" id="product6" />
+          </td>
+          <td><img src="pic/nuts.jpg" alt="Bananas" /></td>
+          <td>KACANG</td>
+          <td>
+            <select id="product6-option" onchange="updateTotalRow('product6')">
+              <option data-price="3" selected>Per gram - RM3</option>
+              <option data-price="5">Per kilo - RM18</option>
+            </select>
+          </td>
+          <td>
+            <input
+              type="number"
+              id="product6-quantity"
+              value="0"
+              min="0"
+              style="width: 60px"
+              onchange="updateTotalRow('product6')"
+            />
+          </td>
+          <td class="item-total" id="product6-total">RM 0</td>
+        </tr>
+        <!-- Product 7 -->
+        <tr>
+          <td>
+            <input type="checkbox" id="product7" />
+          </td>
+          <td><img src="pic/oil.jpg" alt="Milk" /></td>
+          <td>MINYAK</td>
+          <td>
+            <select id="product7-option" onchange="updateTotalRow('product7')">
+              <option data-price="4" selected>1 Liter - RM4</option>
+              <option data-price="7">2 Liters - RM7</option>
+            </select>
+          </td>
+          <td>
+            <input
+              type="number"
+              id="product7-quantity"
+              value="0"
+              min="0"
+              style="width: 60px"
+              onchange="updateTotalRow('product7')"
+            />
+          </td>
+          <td class="item-total" id="product7-total">RM 0</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5" class="total">Total:</td>
+          <td class="grand-total">RM 0</td>
+        </tr>
+      </tfoot>
+    </table>
+    <a href="#" class="checkout-btn" onclick="showPopup(event)">Proceed to Checkout</a>
+  </div>
+
+  <!-- Popup Section -->
+  <div class="popup-overlay" id="popup-overlay"></div>
+  <div class="popup" id="popup">
+    <h3 style="text-align: center;">Order Summary</h3>
+    <p><strong>Username:</strong> <span id="popup-username"></span></p>
+    <p><strong>Location:</strong> <span id="popup-location"></span></p>
+    <p><strong>Phone Number:</strong> <span id="popup-phone"></span></p>
+    <p><strong>Type of Payment:</strong> <span id="popup-payment"></span></p>
+    <p><strong><a href="#"><u>QR link</u></a></strong></p>
+    <p><strong>Items:</strong></p>
+    <ul id="popup-items"></ul>
+    <p><strong style="font-size: 30px;">Total Payment: RM<span id="popup-total"></span></strong></p>
+    <button class="close-btn" onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    // Update total for a row on quantity or option change
+    function updateTotalRow(productId) {
+      const checkbox = document.getElementById(productId);
+      const optionSelect = document.getElementById(productId + "-option");
+      const quantityInput = document.getElementById(productId + "-quantity");
+      const totalCell = document.getElementById(productId + "-total");
+
+      if (!checkbox.checked) {
+        totalCell.textContent = "RM 0";
+        updateGrandTotal();
+        return;
+      }
+
+      const price = parseFloat(
+        optionSelect.options[optionSelect.selectedIndex].getAttribute("data-price")
+      );
+      const quantity = parseInt(quantityInput.value) || 0;
+      const total = price * quantity;
+      totalCell.textContent = `RM ${total}`;
+      updateGrandTotal();
+    }
+
+    // Update grand total summing all checked product totals
+    function updateGrandTotal() {
+      let grandTotal = 0;
+      const productIds = ["product1", "product2", "product3"];
+      productIds.forEach((id) => {
+        const checkbox = document.getElementById(id);
+        if (checkbox.checked) {
+          const totalCell = document.getElementById(id + "-total");
+          const val = parseFloat(totalCell.textContent.replace("RM ", "")) || 0;
+          grandTotal += val;
+        }
+      });
+      document.querySelector(".grand-total").textContent = `RM ${grandTotal}`;
+    }
+
+    // Show popup with order summary
+    function showPopup(event) {
+      event.preventDefault(); // Prevent default link behavior
+
+      const username = document.getElementById("username").value.trim();
+      const location = document.getElementById("location").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const payment = document.getElementById("payment").value;
+
+      // Validate form inputs
+      if (!username || !location || !phone || !payment) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Collect selected products
+      const productIds = ["product1", "product2", "product3"];
+      let anySelected = false;
+      let itemsHtml = "";
+      let totalPayment = 0;
+
+      productIds.forEach((id) => {
+        const checkbox = document.getElementById(id);
+        if (checkbox.checked) {
+          anySelected = true;
+          const optionSelect = document.getElementById(id + "-option");
+          const quantityInput = document.getElementById(id + "-quantity");
+          const price = parseFloat(
+            optionSelect.options[optionSelect.selectedIndex].getAttribute("data-price")
+          );
+          const quantity = parseInt(quantityInput.value) || 0;
+          const itemTotal = price * quantity;
+          if(quantity > 0){
+            itemsHtml += `<li>${optionSelect.options[optionSelect.selectedIndex].text} - Qty: ${quantity} - RM${itemTotal}</li>`;
+            totalPayment += itemTotal;
+          }
+        }
+      });
+
+      if (!anySelected) {
+        alert("Please select at least one product.");
+        return;
+      }
+      if(totalPayment === 0){
+        alert("Please specify quantity greater than zero.");
+        return;
+      }
+
+      // Update popup content
+      document.getElementById("popup-username").textContent = username;
+      document.getElementById("popup-location").textContent = location;
+      document.getElementById("popup-phone").textContent = phone;
+      document.getElementById("popup-payment").textContent = payment;
+      document.getElementById("popup-items").innerHTML = itemsHtml;
+      document.getElementById("popup-total").textContent = totalPayment.toFixed(2);
+
+      // Show popup
+      document.getElementById("popup-overlay").style.display = "block";
+      document.getElementById("popup").style.display = "block";
+    }
+
+    // Close popup
+    function closePopup() {
+      document.getElementById("popup-overlay").style.display = "none";
+      document.getElementById("popup").style.display = "none";
+    }
+
+    // Add event listeners to checkboxes to clear totals if unchecked
+    ["product1", "product2", "product3"].forEach((id) => {
+      document.getElementById(id).addEventListener("change", () => {
+        updateTotalRow(id);
+      });
+    });
+  </script>
+</body>
+</html>

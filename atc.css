@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); 
+*{
+    margin:0;
+    padding:0;
+}
+
+body
+{ 
+    height: 100%;
+        width: 100%;
+        background-image:url(pic/bckgrnd.jpg);
+        background-position: center;
+        background-size: cover;
+
+}
+
+.navbar{
+    width: 100%;
+    height:75px;
+    margin: auto;
+    position: relative;
+}
+
+.icon{
+    color: black;
+    font-size: 24px;
+    font-family: Arial;
+    padding-left: 20px;
+}
+
+h2 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 20px;
+    position:unset;
+    
+}
+u1{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+u1 li{
+    list-style: none;
+    margin-left: 40px;
+    margin-top: 25px;
+    font-size: 14px;
+
+}
+u1 li a{
+    text-decoration: none;
+    color: #000000;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    background-color: red;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+u1 li a:hover{
+    color: #fff720;
+
+}
+
+
+.btn{
+    width:100%;
+    height:35px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 0px;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+.tab-space {
+    padding-left:70px;
+    padding-right:70px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #e40d0d;
+    width: fit-content;
+    border-radius: 20px;
+}
+.tab-space button {
+    padding: 15px 25px;  
+    font-weight: 500;
+    background-color:#ff7200;
+    outline: none;
+    border: none;
+    margin: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;}
+
+
+
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgb(234, 247, 179);
+    color: rgb(255, 9, 9);
+    text-align: center;
+}
+
+.cart-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff7200;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td img {
+    width: 100px; /* Set a fixed width for product images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.item-total {
+    font-weight: bold;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.grand-total {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff7200;
+}
+
+.checkout-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7200;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #e66a00;
+}
+body
+{ 
+    height: 100%;
+        width: 100%;
+        background-image:url(pic/bckgrnd.jpg);
+        background-position: center;
+        background-size: cover;
+
+}
+
+.navbar{
+    width: 100%;
+    height:75px;
+    margin: auto;
+    position: relative;
+}
+
+.icon{
+    color: black;
+    font-size: 24px;
+    font-family: Arial;
+    padding-left: 20px;
+}
+
+h2 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 20px;
+    position:unset;
+    
+}
+u1{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+u1 li{
+    list-style: none;
+    margin-left: 40px;
+    margin-top: 25px;
+    font-size: 14px;
+
+}
+u1 li a{
+    text-decoration: none;
+    color: #000000;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    background-color: red;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+u1 li a:hover{
+    color: #fff720;
+
+}   
+.form-section, .checkout-table, .submit-section {
+        margin-bottom: 20px;
+    }
+    label {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+    input[type="text"], input[type="tel"], select {
+        padding: 8px;
+        margin: 10px 0;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .item_box {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .check-tbl th,.check-tbl td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ccc;
+    }
+    .check-tbl th {
+        background-color: #f4f4f4;
+    }
+    .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+    }
+    .btn:hover {
+        background-color: #45a049;
+    }
+
+    /* Popup style */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 50%;
+    }
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+
+    .close-btn {
+        background-color: #f44336;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .close-btn:hover {
+        background-color: #da190b;
+    }

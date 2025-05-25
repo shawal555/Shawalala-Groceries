@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); 
+*{
+    margin:0;
+    padding:0;
+}
+
+.main
+{ 
+    height: 100%;
+        width: 100%;
+        background-image:url(pic/bckgrnd.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+
+}
+
+.navbar{
+    width: 100%;
+    height:75px;
+    margin: auto;
+    position: relative;
+}
+
+.icon{
+    color: black;
+    font-size: 24px;
+    font-family: Arial;
+    padding-left: 20px;
+}
+
+h2 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 20px;
+    position:unset;
+    
+}
+u1{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+u1 li{
+    list-style: none;
+    margin-left: 40px;
+    margin-top: 25px;
+    font-size: 14px;
+
+}
+u1 li a{
+    text-decoration: none;
+    color: #000000;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    background-color: red;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+u1 li a:hover{
+    color: #fff720;
+
+}
+/* login part */
+.search{
+    width: 230px;
+    float:left;
+    margin-left: 380px;
+    margin-top: 25px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 230px;
+    height:40px;
+    background: rgb(255, 235, 235)  ;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color:#fff;
+    
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-right: 40px; 
+}
+
+.btn{
+    width:100%;
+    height:35px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 0px;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+.tab-space {
+    padding-left: 100px;
+    color: #fff;
+}
+.tab-space button {
+    padding: 15px 25px;  
+    font-weight: 500;
+    background-color:#ff7200;
+    outline: none;
+    border: none;
+    margin: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;}
+
+
+
